@@ -1,0 +1,19 @@
+.hd {
+  height:60rpx;
+  line-height:60rpx;
+}
+.hd .title {
+  float: left;
+  font-weight:bold;
+  font-size:30rpx;
+}
+/* 更多 */
+.hd .more {
+  float:right;
+  height:50rpx;
+  line-height:50rpx;
+  padding:0 20rpx;
+  border:2rpx solid #e0e0e0;
+  border-radius: 30rpx;
+  font-size:24rpx;
+}

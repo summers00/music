@@ -1,0 +1,40 @@
+<view class="songDetail">
+<!-- 头部 -->
+  <view class="title">
+    <view class="song-name">{{detailData.name}}</view>
+    <view class="singer-name">{{detailData.ar[0].name}}</view>
+  </view>
+  <!-- 圆圈 -->
+  <view class="circle"></view>
+  <!-- 摇杆 -->
+  <image src="/static/images/song/needle.png" class="needle {{isPlay&&'needleRotate'}}"></image>
+  <!-- 磁盘 -->
+  <view class="disc-box {{isPlay&&'discAnimation'}}">
+    <image src="/static/images/song/disc.png" class="disc"></image>
+    <image src="{{detailData.al.picUrl}}" class="cover"></image>
+  </view>
+  <!-- 进度部分 -->
+  <view class="processControl">
+    <!-- 当前时间 -->
+    <view class="currentTime">{{currentTime}}</view>
+    <!-- 进度条 -->
+    <view class="processBar">
+      <view class="currentBar" style="width:{{currentWidth+'rpx'}}">
+        <view class="playCircle"></view>
+      </view>
+    </view>
+    <!-- 总时长 -->
+    <view class="durationTime">{{durationTime}}</view>
+  </view>
+  <!-- 底部 -->
+  <view class="musicControl">
+    <text class="iconfont icon-suijibofang"></text>
+    <!-- 上一首 -->
+    <text class="iconfont icon-shangyiqu101" bindtap="handleSwitch" id="pre"></text>
+    <!-- 暂停/播放 -->
+    <text class="iconfont icon-zanting big" bindtap="handlePlay"></text>
+    <!-- 下一首 -->
+    <text class="iconfont icon-xiayiqu101" bindtap="handleSwitch" id="next"></text>
+    <text class="iconfont icon-bofangliebiao"></text>
+  </view>
+</view>
